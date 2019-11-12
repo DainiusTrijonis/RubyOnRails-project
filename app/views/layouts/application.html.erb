@@ -7,9 +7,21 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css">
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="w3-bar w3-black">
+      <%= link_to('Home', '/', {class: 'w3-bar-item w3-button'}) %>
+      <%= link_to('Bitcoin', '/bitcoin', {class: 'w3-bar-item w3-button'}) %>
+      <%= link_to('Time', '/time', {class: 'w3-bar-item w3-button'}) %>
+      <%= link_to('Trending', '/youtube', {class: 'w3-bar-item w3-button'}) %>
+    </div>
+    <div class="w3-container" align="center">
+      <h1 align="center"><%= @page_title %></h1>
+      <%= yield %>
+    </div>
   </body>
 </html>
